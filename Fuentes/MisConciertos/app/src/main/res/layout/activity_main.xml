@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Mis Conciertos"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/nombreAr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre artista"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Dia del concierto"
+                android:textColor="@color/divider"
+                android:textSize="10dp"></TextView>
+
+            <CalendarView
+                android:id="@+id/calendario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="10dp"></CalendarView>
+
+            <Spinner
+                android:id="@+id/genero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/generos"></Spinner>
+
+            <Spinner
+                android:id="@+id/calificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/calificacion"></Spinner>
+
+            <EditText
+                android:id="@+id/valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="$ Valor de entrada"
+                android:inputType="number"
+                android:textColor="@color/divider"></EditText>
+
+            <Button
+                android:id="@+id/agregarBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="Agregar"></Button>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Lista Eventos"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+            <include layout="@layout/eventos_list"></include>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
